@@ -1,26 +1,19 @@
+#pragma once
 #include "Vec3.h"
 #include "Ray.h"
-#include <cmath>
 
 class Camera {
 private:
-    Vec3F position;
-    Vec3F axisX;
-    Vec3F axisY;
-    Vec3F axisZ;
+    Vector position;
+    //Vector axisX;
+    //Vector axisY;
+    //Vector axisZ;
     double fov;
     double near;
-
 public:
-    Camera(Vec3F position, Vec3F target, Vec3F up, double fov, double near) {
-        this->position = position;
-        this->target = target;
-        this->up = up;
-        this->fov = fov;
-        this->near = near;
-    }
+    //Construtor
+    Camera(Vector position, double fov, double near);
 
-    Ray GetRay(double x, double y, int width, int height) {
-        
-    }
+    //Metodos
+    Ray GetRay(double x, double y, int width, int height);
 };

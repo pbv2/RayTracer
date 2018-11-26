@@ -1,3 +1,4 @@
+#pragma once
 #include "Geometry.h"
 #include "Material.h"
 #include "ObjectIntersection.h"
