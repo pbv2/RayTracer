@@ -1,9 +1,10 @@
 #pragma once
-#include "Vec3.h"
+#include <iostream>
+#include <string>
 
 class Material{
     private:
-    double Nome;
+    std :: string Nome;
     double Ke;
     double Kd;
     double Ks;
@@ -13,7 +14,7 @@ class Material{
     double alpha;
     public:
     
-    Material(double Nomen);
+    Material(std :: string Nomen);
     double GetR();
     double GetG();
     double GetB();
@@ -21,7 +22,7 @@ class Material{
     double GetKd();
     double GetKs();
     double GetAlpha();
-    double GetNome();
+    std :: string GetNome();
     void SetR(double Rn);
     void SetG(double Gn);
     void SetB(double Bn);

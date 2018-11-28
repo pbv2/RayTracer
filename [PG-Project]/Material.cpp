@@ -1,5 +1,7 @@
 #include "Material.h"
- Material::Material(double Nomen){
+#include <string>
+#include <iostream>
+ Material::Material(std :: string Nomen){
      Nome =Nomen;
  }
    double Material::GetR(){
@@ -23,7 +25,7 @@
     double Material::GetAlpha(){
         return this->alpha;
     }
-    double Material::GetNome(){
+    std :: string Material::GetNome(){
         return this->Nome;
     }
     void Material::SetR(double Rn){
