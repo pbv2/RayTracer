@@ -1,0 +1,43 @@
+﻿#Arquivo de configuracao
+#As opcoes de configuracao permitem configurar as classes:
+#Imagem, Camera, Material, Sphere e Light
+
+#Resolution (Imagem) -> Width Height
+resolution 1280 720
+
+#Camera -> Posicao (px py pz) | Target (tx ty tz) | Up (ux uy uz) fov d
+camera 0 0 50 0 0 0 0 1 0 60 2
+
+#Material nome red green blue Kd Ks Ke alpha
+material background 0.9 0.9 1 0 0 0 0
+material red 1 0 0 0.5 0.4 0.1 32
+material green 0 1 0 0.5 0.4 0.1 32
+material blue 0 0 1 0.5 0.4 0.1 32
+material magenta 1 0 1 0.5 0.4 0.1 32
+material yellow 1 1 0 0.5 0.4 0.1 32
+material black 0 0 0 0.5 1 0.1 16
+material deepskyblue 0 0.75 1 0.5 1 1 64
+
+#sphere -> Centro (cx cy cz) raio materialName
+sphere 0 -10010 0 10000 red
+sphere 5 0 -25 3 magenta
+sphere -5.5 0 -25 3 yellow
+sphere 50 50 50 20 yellow
+sphere 0 1 -10 3 red
+sphere -10 3 -10 6 blue
+sphere 10 3 -10 6 blue
+sphere 0 16 -50 22 black
+sphere -15 12 -10 3 green
+sphere -5 12 -10 3 green
+sphere 15 12 -10 3 green
+sphere 5 12 -10 3 green
+sphere 50 20 -80 25 deepskyblue
+sphere -50 20 -80 25 deepskyblue
+
+#light -> Posicao (px py pz) | Cor (red green blue) intesity
+light 0 0 25 1 0 0 10000
+light 0 0 25 0 1 0 10000
+light 0 0 25 0 0 1 10000
+light 0 100 -10 1 1 1 1000000
+light -200 20 -80 1 1 0 100000
+light 200 20 -80 1 1 0 100000

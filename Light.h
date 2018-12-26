@@ -1,34 +1,21 @@
-#ifndef _Light_H
-#define _Light_H
+#pragma once
+#include "Vec3.h"
 
-#include "Source.h"
-#include "Vect.h"
-#include "Color.h"
-
-class Light : public Source {
-	Vect position;
-	Color color;
-	
-	public:
-	
-	Light ();
-	
-	Light (Vect, Color);
-	
-	// method functions
-	virtual Vect getLightPosition () { return position; }
-	virtual Color getLightColor () { return color; }
-	
+class Light {
+private:
+    Vector position;
+    Vector color;
+    double intensity;
+public: 
+    //Construtor
+    Light (Vector position, Vector color, double i);
+    
+    //Metodos
+    Vector getColor (); 
+    double getIntensity ();
+    Vector getPosition ();
+    
+    Vector getIntensityPoint (Vector point);
+    double getDistance (Vector point);
+    Vector getDirection (Vector point);
 };
-
-Light::Light () {
-	position = Vect(0,0,0);
-	color = Color(1,1,1, 0);
-}
-
-Light::Light (Vect p, Color c) {
-	position = p;
-	color = c;
-}
-
-#endif

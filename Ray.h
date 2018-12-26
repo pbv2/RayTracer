@@ -1,31 +1,15 @@
-#ifndef _RAY_H
-#define _RAY_H
-
-#include "Vect.h"
+#pragma once
+#include "Vec3.h"
 
 class Ray {
-	Vect origin, direction;
-	
-	public:
-	
-	Ray ();
-	
-	Ray (Vect, Vect);
-	
-	// method functions
-	Vect getRayOrigin () { return origin; }
-	Vect getRayDirection () { return direction; }
-	
+private:
+    Vector origin;
+    Vector direction;
+public:
+    //Construtor
+    Ray (Vector origin, Vector direction);
+
+    //Metodos
+    Vector getOrigin ();
+    Vector getDirection ();
 };
-
-Ray::Ray () {
-	origin = Vect(0,0,0);
-	direction = Vect(1,0,0);
-}
-
-Ray::Ray (Vect o, Vect d) {
-	origin = o;
-	direction = d;
-}
-
-#endif
